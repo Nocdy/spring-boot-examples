@@ -13,7 +13,14 @@ public class VisitorController {
 
     @Autowired
     private VisitorRepository repository;
-	
+
+    /**
+     *
+     * @param request 连接请求
+     * @return String
+     *
+     * 简单jpa操作，查询数据库是否存在键
+     */
     @RequestMapping("/")
     public String index(HttpServletRequest request) {
         String ip=request.getRemoteAddr();
